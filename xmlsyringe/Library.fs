@@ -8,18 +8,21 @@ open System.Xml.XPath
 module Xml =
 
    
-    let injectElementInXDocument (document:XDocument) (where:string) (xml:string):unit =
+    let injectElementInXDocument (document:XDocument) (where:string) (xml:string):Result<unit, string> =
         
         let xElement = XElement.Parse(xml)
         let elements = document.XPathSelectElements(where)
+
+        
+
         elements
             |> Seq.iter (printfn "%A")
-        printfn ""
+        Ok ()
 
-    let injectInXmlString (document:string) (where:string) (xml:string):string =
+    let injectInXmlString (document:string) (where:string) (xml:string):Result<string, string> =
         let doc = (XDocument.Parse(document))
-        injectElementInXDocument doc where xml
-
+        let result = injectElementInXDocument doc where xml
+        // handle result
         let sb = new StringBuilder()
 
         let xws = new XmlWriterSettings() 
@@ -29,4 +32,4 @@ module Xml =
         use xw = (XmlWriter.Create(sb, xws))
         doc.Save(xw)
         xw.Flush()
-        sb.ToString()
+        Ok (sb.ToString())

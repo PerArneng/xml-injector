@@ -12,7 +12,7 @@ type TestClass () =
     [<Test>]
     member this.Test1 () =
 
-        let value = XmlSyringe.Xml.injectInXmlString "<h></h>" "//h" "<b></b>"
+        let value = XmlSyringe.Xml.injectInXmlString "<h><a></a><a></a></h>" "//a" "<b></b>"
 
         Assert.AreEqual("<h></h>", value);
 

@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "xmlsyringe", "xmlsyringe\xmlsyringe.fsproj", "{4C16DF5F-B992-445C-BF84-9DF9F3C72F7A}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "xmlsyringe", "xmlsyringe\xmlsyringe.fsproj", "{4C16DF5F-B992-445C-BF84-9DF9F3C72F7A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "xmlsyrignetest", "xmlsyrignetest\xmlsyrignetest.fsproj", "{620418D3-E2C5-46C0-AEAC-0B5B10DE885D}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "xmlsyrignetest", "xmlsyrignetest\xmlsyrignetest.fsproj", "{620418D3-E2C5-46C0-AEAC-0B5B10DE885D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3E14C606-84F8-47D0-A5A3-2F331169F9E3}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.fsx = build.fsx
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4C16DF5F-B992-445C-BF84-9DF9F3C72F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +48,11 @@ Global
 		{620418D3-E2C5-46C0-AEAC-0B5B10DE885D}.Release|x64.Build.0 = Release|Any CPU
 		{620418D3-E2C5-46C0-AEAC-0B5B10DE885D}.Release|x86.ActiveCfg = Release|Any CPU
 		{620418D3-E2C5-46C0-AEAC-0B5B10DE885D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F5E3854-848E-4F44-8766-9EE692D3DBA6}
 	EndGlobalSection
 EndGlobal
